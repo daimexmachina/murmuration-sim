@@ -1,0 +1,14 @@
+num_birds = 1000
+bird_radius = 2.0
+neighbor_count = 7
+max_speed = 4.0
+max_force = 0.15
+alignment_weight = 1.0
+cohesion_weight = 1.0
+separation_weight = 1.5
+separation_radius = 20.0
+trail_length = 15
+
+[interaction]
+predator_radius = 100.0
+predator_force = 0.5
