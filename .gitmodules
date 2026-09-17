@@ -1,0 +1,4 @@
+[submodule "bike-route"]
+	path = bike-route
+	url = git@github.com:daimexmachina/bike-route.git
+	branch = master
