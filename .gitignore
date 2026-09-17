@@ -1,0 +1,17 @@
+# Personal / sensitive exports must never be committed to this PUBLIC repo.
+# The Mnemosyne holographic memory export contains phone numbers, LAN and
+# Tailscale addresses, /home paths, home coordinates and other personal facts.
+mnemosyne-holographic-export.jsonl
+mnemosyne-*.jsonl
+
+# Secrets must never land here.
+*.env
+.env
+**/.env
+
+# bubble-watch lives in its own repo:
+#   https://github.com/daimexmachina/bubble-watch
+# A nested working copy is ignored rather than recorded as a submodule, because
+# this repo carries no .gitmodules and a bare gitlink is unresolvable to anyone
+# who clones it.
+bubble-watch/
