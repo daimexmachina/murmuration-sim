@@ -1,0 +1,101 @@
+                                              Value of Private Construction Put in Place - Not Seasonally Adjusted
+                                   (Millions of dollars. Details may not add to totals since all types of construction are not shown separately.)
+                                                                                                                                                             Year-to-date
+                                                         Jul           Jun             May             Apr            Mar             Jul              Jul             Jul   Percent
+Type of Construction:                                  2026p          2026r           2026r           2026           2026           2025             2026            2025    Change
+
+Total Private Construction1                         144,923        144,543         140,668        135,757         133,964        153,762        941,690          989,177        -4.8
+
+Residential (inc. Improvements)2                     80,672          80,406         77,691          73,712         73,094         87,255        510,329          532,148        -4.1
+    New single family                                35,965          36,302         35,437          34,510         33,176         38,385        231,844          245,883        -5.7
+    New multifamily                                   9,683          10,024          9,818           9,908          9,594          9,777         67,377           67,610        -0.3
+
+  Nonresidential                                     64,251          64,137         62,977          62,046         60,870         66,506        431,361          457,029        -5.6
+
+     Lodging                                           1,958          1,976          1,971           1,951          1,933           2,175           13,443         15,022      -10.5
+
+     Office                                          10,683          10,268          9,778           9,325          8,761           8,772           65,397         59,323       10.2
+       General                                        3,854           3,852          3,846           3,797          3,714           4,360           26,212         29,708      -11.8
+       Data center                                    6,551           6,122          5,627           5,198          4,781           4,133           37,222         27,608       34.8
+       Financial                                        235             252            265             289            231             222            1,699          1,588        7.0
+
+     Commercial (inc. Farm)                            9,969         10,050          9,929           9,796          9,421         10,558            67,247         71,265       -5.6
+       Automotive                                        953            969            963             959            925          1,006             6,542          6,574       -0.5
+         Sales                                           277            281            276             283            285            355             1,957          2,304      -15.1
+         Service/parts                                   541            547            550             543            518            555             3,681          3,603        2.2
+         Parking                                         135            140            137             134            121             97               904            668       35.3
+       Food/beverage                                   1,172          1,176          1,151           1,134          1,081          1,201             7,774          8,461       -8.1
+         Food                                            516            518            496             487            453            446             3,296          3,218        2.4
+         Dining/drinking                                 509            513            508             509            485            621             3,469          4,243      -18.2
+      Multi-retail                                     1,477          1,485          1,475           1,432          1,353          1,529             9,838         10,119       -2.8
+         General merchandise                             135            138            138             139            138            171               964          1,077      -10.5
+         Shopping center                               1,114          1,115          1,114           1,071            989          1,156             7,269          7,755       -6.3
+         Shopping mall                                   145            144            141             139            134            108               978            784       24.7
+       Other commercial                                  700            727            743             693            637            714             4,653          4,541        2.5
+         Drug store                                       45             43             44              37             38             18               267            154       73.4
+         Building supply store                            93            101            103              96             91             88               671            523       28.3
+         Other stores                                    306            317            332             316            294            366             2,097          2,225       -5.8
+       Warehouse                                       4,520          4,551          4,481           4,465          4,366          4,961            30,804         34,059       -9.6
+         General commercial                            3,988          4,016          3,946           3,923          3,827          4,417            27,074         30,341      -10.8
+         Mini-storage                                    528            530            530             530            528            542             3,681          3,708       -0.7
+
+     Health Care                                       4,723          4,808          4,756           4,703          4,625           4,997           32,493         34,341       -5.4
+       Hospital                                        2,528          2,561          2,534           2,491          2,442           2,539           17,245         17,406       -0.9
+       Medical building                                1,797          1,837          1,817           1,779          1,744           1,944           12,313         13,568       -9.2
+       Special care                                      398            410            405             433            439             515            2,935          3,368      -12.9
+                                               Value of Private Construction Put in Place - Not Seasonally Adjusted
+                                    (Millions of dollars. Details may not add to totals since all types of construction are not shown separately.)
+                                                                                                                                                              Year-to-date
+                                                          Jul           Jun             May             Apr            Mar             Jul              Jul             Jul    Percent
+Type of Construction:                                   2026p          2026r           2026r           2026           2026           2025             2026            2025     Change
+
+     Educational                                        2,188          2,251          2,168           2,121          2,035           2,325           14,618         15,003        -2.6
+       Preschool                                          165            177            183             180            151             190            1,147          1,206        -4.9
+       Primary/secondary                                  552            575            564             548            508             605            3,735          3,825        -2.4
+       Higher education                                 1,110          1,134          1,074           1,041          1,027           1,180            7,320          7,730        -5.3
+          Instructional                                   486            498            488             458            448             518            3,234          3,441        -6.0
+          Dormitory                                       344            348            315             304            300             352            2,173          2,258        -3.8
+          Sports/recreation                               187            188            179             180            174             182            1,217          1,219        -0.2
+       Other educational                                  279            278            270             273            260             250            1,841          1,585        16.2
+          Gallery/museum                                  218            216            207             212            206             184            1,449          1,194        21.4
+
+     Religious                                            558            564            554             527            511             472            3,683          2,954        24.7
+       House of worship                                   426            425            428             409            394             365            2,823          2,402        17.5
+       Other religious                                    132            140            126             118            117             107              860            552        55.8
+          Auxiliary building                               48             61             52              49             51              57              359            346         3.8
+
+     Amusement and Recreation                           2,014          1,998          1,979           1,954          1,812           1,939           13,312         12,479         6.7
+      Theme/amusement park                                218            240            239             238            224             206            1,597          1,477         8.1
+       Sports                                             618            610            611             600            520             586            4,029          3,667         9.9
+       Fitness                                            206            207            201             198            177             188            1,340          1,090        22.9
+       Performance/meeting center                         284            269            266             267            261             261            1,853          1,486        24.7
+       Social center                                      394            395            390             369            351             396            2,580          2,589        -0.3
+       Movie theater/studio                                76             70             71              70             57              65              444            519       -14.5
+
+     Transportation                                     1,678          1,684          1,668           1,609          1,490           1,704           11,083         11,617        -4.6
+       Air                                                534            538            542             519            484             536            3,561          3,829        -7.0
+       Land                                             1,084          1,083          1,066           1,051            965           1,134            7,208          7,572        -4.8
+
+     Communication                                      2,360          2,314          2,288           2,321          2,328           2,282           15,806         15,417         2.5
+
+     Power (inc. Gas and Oil)                         13,576          13,512         13,255          12,988         12,938         12,715            91,619         87,578         4.6
+       Electric                                       11,579          11,496         11,237          10,962         10,924         10,691            77,530         73,877         4.9
+
+     Manufacturing                                    14,186          14,326         14,265          14,374         14,665         18,141        100,157          129,282        -22.5
+       Food/beverage/tobacco                           1,379           1,371          1,345           1,341          1,339          1,307          9,248            8,796          5.1
+       Chemical                                        3,653           3,695          3,635           3,624          3,627          3,608         25,045           25,356         -1.2
+       Plastic/rubber                                    345             355            349             350            361            332          2,418            2,179         11.0
+       Nonmetallic mineral                                82              88             88             104            105            185            681            1,305        -47.8
+       Fabricated metal                                  304             316            327             319            306            393          2,166            2,701        -19.8
+       Computer/electronic/electrical                  4,306           4,391          4,494           4,682          5,048          8,169         33,327           61,047        -45.4
+       Transportation equipment                        1,413           1,398          1,357           1,298          1,188          1,182          8,793            8,809         -0.2
+p
+  Preliminary r Revised
+1
+ Total private construction includes the following categories of construction not shown separately:
+public safety, highway and street, sewage and waste disposal, water supply, and conservation and development.
+2
+ Private residential improvements does not include expenditures to rental, vacant, or seasonal properties.
+Source: U.S. Census Bureau, Construction Spending, September 1, 2026. Additional information on the survey methodology may be found at
+<www.census.gov/construction/c30/meth.html>                                                                                                                      10:00 AM EDT 09/01/26
+

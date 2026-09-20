@@ -1,0 +1,92 @@
+{
+ "ORCL": {
+  "n_annual": 17,
+  "first": "2010-05-31",
+  "last": "2026-05-31",
+  "lastval_B": 122.7,
+  "max_gap_days": 366,
+  "max_growth_x": 2.06,
+  "staleness_mo": 3.6,
+  "USABLE": true
+ },
+ "MSFT": {
+  "n_annual": 18,
+  "first": "2009-06-30",
+  "last": "2026-06-30",
+  "lastval_B": 431.8,
+  "max_gap_days": 366,
+  "max_growth_x": 1.45,
+  "staleness_mo": 2.6,
+  "USABLE": true
+ },
+ "GOOGL": {
+  "n_annual": 11,
+  "first": "2014-12-31",
+  "last": "2024-12-31",
+  "lastval_B": 199.8,
+  "max_gap_days": 366,
+  "max_growth_x": 1.38,
+  "staleness_mo": 20.5,
+  "USABLE": false
+ },
+ "META": {
+  "n_annual": 8,
+  "first": "2011-12-31",
+  "last": "2018-12-31",
+  "lastval_B": 31.6,
+  "max_gap_days": 366,
+  "max_growth_x": 1.72,
+  "staleness_mo": 92.5,
+  "USABLE": false
+ },
+ "AMZN": {
+  "n_annual": 13,
+  "first": "2009-12-31",
+  "last": "2025-12-31",
+  "lastval_B": 534.1,
+  "max_gap_days": 1827,
+  "max_growth_x": 3.29,
+  "staleness_mo": 8.5,
+  "USABLE": false
+ },
+ "AAPL": {
+  "n_annual": 15,
+  "first": "2011-09-24",
+  "last": "2025-09-27",
+  "lastval_B": 125.8,
+  "max_gap_days": 371,
+  "max_growth_x": 1.86,
+  "staleness_mo": 11.7,
+  "USABLE": true
+ },
+ "NVDA": {
+  "n_annual": 17,
+  "first": "2010-01-31",
+  "last": "2026-01-25",
+  "lastval_B": 17.0,
+  "max_gap_days": 371,
+  "max_growth_x": 1.59,
+  "staleness_mo": 7.7,
+  "USABLE": true
+ },
+ "AVGO": {
+  "n_annual": 9,
+  "first": "2017-10-29",
+  "last": "2025-11-02",
+  "lastval_B": 7.4,
+  "max_gap_days": 371,
+  "max_growth_x": 1.14,
+  "staleness_mo": 10.5,
+  "USABLE": true
+ },
+ "TSLA": {
+  "n_annual": 14,
+  "first": "2011-12-31",
+  "last": "2024-12-31",
+  "lastval_B": 51.4,
+  "max_gap_days": 366,
+  "max_growth_x": 2.41,
+  "staleness_mo": 20.5,
+  "USABLE": false
+ }
+}

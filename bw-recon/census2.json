@@ -1,0 +1,167 @@
+{
+ "2015": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 125,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 36,
+   "relation": "eq"
+  }
+ },
+ "2016": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 147,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 48,
+   "relation": "eq"
+  }
+ },
+ "2017": {
+  "total_10K_the": {
+   "ERR": "HTTP Error 500: Internal Server Error"
+  },
+  "AI_bare": {
+   "ERR": "HTTP Error 500: Internal Server Error"
+  },
+  "AI_10Q": {
+   "ERR": "HTTP Error 500: Internal Server Error"
+  }
+ },
+ "2018": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 256,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 338,
+   "relation": "eq"
+  }
+ },
+ "2019": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 370,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 585,
+   "relation": "eq"
+  }
+ },
+ "2020": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 448,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 646,
+   "relation": "eq"
+  }
+ },
+ "2021": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 673,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 889,
+   "relation": "eq"
+  }
+ },
+ "2022": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 981,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 1156,
+   "relation": "eq"
+  }
+ },
+ "2023": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 1176,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 1618,
+   "relation": "eq"
+  }
+ },
+ "2024": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 1901,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 2791,
+   "relation": "eq"
+  }
+ },
+ "2025": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 2819,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 3786,
+   "relation": "eq"
+  }
+ },
+ "2026": {
+  "total_10K_the": {
+   "value": 10000,
+   "relation": "gte"
+  },
+  "AI_bare": {
+   "value": 3943,
+   "relation": "eq"
+  },
+  "AI_10Q": {
+   "value": 3565,
+   "relation": "eq"
+  }
+ }
+}
