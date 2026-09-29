@@ -71,8 +71,46 @@ python3 jev.py --demo --json   # raw response
 7. Mixing an obviously-easy set (see `route_demo.py`) will show 100% auto-route. That is
    a bad test set, not a working guardrail — deliberately include the hard cases.
 
+## Measured pilot: circular-financing classification (`circular_pilot.py`)
+
+The first **scored** test case, because bubble-watch already contains ground truth: 23 edges a
+human read and classified from primary filings (`src/circular_rubric.rs`), each with citation,
+magnitude and falsifier. Passages are extracted straight from that source (class criteria come
+from the project's own enum doc comments, not my paraphrase).
+
+| metric | run 1 | run 2 | run 3 |
+| --- | --- | --- | --- |
+| choice accuracy vs 23 human labels | 19/23 (83%) | 19/23 (83%) | 19/23 (83%) |
+| mean `is_financing` on 14 real edges | 0.64 | 0.63 | 0.64 |
+| mean `is_financing` on 8 refutations | 0.05 | 0.05 | 0.05 |
+| false-keeps of refutations @ midpoint thr | 0/8 | 0/8 | 0/8 |
+| wrong answers at confidence ≥ 0.7 | 3/4 | 3/4 | 3/4 |
+
+**The separation is the real result.** Not one of the 8 hand-confirmed refutations (marketing,
+model-integration lists, self-references) was kept as a financing structure, in any run. That is
+the exact discrimination the project's author says keyword counting cannot do.
+
+**All 4 misses were STABLE across runs** — same edges each time, so they are systematic:
+`CRWV x OpenAI`, `CRWV x MSFT`, `AMZN x OpenAI` (all gold `vendor_financing_its_own_customer`),
+and `ORCL x unnamed backlog counterparty` (gold `refuted`).
+
+⚠ **Three of those four are probably label/passage conflicts, not model errors.** The extractor
+takes `verbatim` when present, else the quoted fragments of `citation` + `magnitude`. For the
+CRWV/AMZN entries the verbatim text is a single disclosure (a commitment, a revenue
+concentration) while the human label rests on the *aggregate* reading — the project's own note
+says the label comes from reading several passages together. Fed one passage in isolation, Jev
+saw a supply commitment and said so, which is arguably correct. **Before citing 83% as Jev's
+accuracy, fix the extraction so the model sees what the label was based on.** A benchmark whose
+examples are mis-assembled measures the benchmark.
+
+**The useful reading at this stage:** Jev did not score these filings as a measurement — the
+rubric keeps judgment out of the composite deliberately. But it looks usable as a *triage* layer
+for the 47-edge scan, where 24 edges are unread and every unread edge currently scores zero.
+
+⚠ **Cost:** ~2 API calls per edge in one request each; token usage was not tracked per edge in
+this run. Measure real cost and latency before wiring it to 47+ edges.
+
 ## Next
 
-Nothing here is wired into a real project yet. Candidates when it is: bubble-watch
-item triage/reranking (the `rerank_typesafe` cookbook is the closest pattern) and the
-bike-route legality checks (verification/citation pattern).
+Nothing here is wired into a real project yet. The natural next step is fixing the passage
+extraction above and re-measuring; after that, bubble-watch triage of the 24 unread edges.

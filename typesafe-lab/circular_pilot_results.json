@@ -1,0 +1,209 @@
+[
+  {
+    "filer": "CRWV",
+    "counterparty": "OpenAI",
+    "gold": "vendor_financing_its_own_customer",
+    "pred": "unsigned_supply_relationship",
+    "conf": 0.82,
+    "financing_p": 0.47,
+    "correct": false
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "MSFT",
+    "gold": "vendor_financing_its_own_customer",
+    "pred": "supply_commitment_scaled_to_financed_demand",
+    "conf": 0.28,
+    "financing_p": 0.75,
+    "correct": false
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "Anthropic",
+    "gold": "vendor_financing_its_own_customer",
+    "pred": "vendor_financing_its_own_customer",
+    "conf": 0.98,
+    "financing_p": 0.95,
+    "correct": true
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "OpenAI",
+    "gold": "vendor_financing_its_own_customer",
+    "pred": "supplier_guarantee_and_investment",
+    "conf": 0.76,
+    "financing_p": 0.93,
+    "correct": false
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "CoreWeave",
+    "gold": "supplier_holding_customer_equity",
+    "pred": "supplier_holding_customer_equity",
+    "conf": 0.97,
+    "financing_p": 0.72,
+    "correct": true
+  },
+  {
+    "filer": "SMCI",
+    "counterparty": "Lambda",
+    "gold": "vendor_sublicensing_its_own_lease_liability",
+    "pred": "vendor_sublicensing_its_own_lease_liability",
+    "conf": 0.95,
+    "financing_p": 0.59,
+    "correct": true
+  },
+  {
+    "filer": "APLD",
+    "counterparty": "CoreWeave",
+    "gold": "landlord_debt_secured_by_tenant_credit",
+    "pred": "landlord_debt_secured_by_tenant_credit",
+    "conf": 0.81,
+    "financing_p": 0.56,
+    "correct": true
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "(capital providers)",
+    "gold": "vendor_organised_third_party_capital",
+    "pred": "vendor_organised_third_party_capital",
+    "conf": 0.83,
+    "financing_p": 0.47,
+    "correct": true
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "(upstream supply chain)",
+    "gold": "supply_commitment_scaled_to_financed_demand",
+    "pred": "supply_commitment_scaled_to_financed_demand",
+    "conf": 0.55,
+    "financing_p": 0.37,
+    "correct": true
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "OpenAI",
+    "gold": "supplier_guarantee_and_investment",
+    "pred": "supplier_guarantee_and_investment",
+    "conf": 0.95,
+    "financing_p": 0.93,
+    "correct": true
+  },
+  {
+    "filer": "AMD",
+    "counterparty": "OpenAI",
+    "gold": "equity_for_purchases",
+    "pred": "equity_for_purchases",
+    "conf": 0.98,
+    "financing_p": 0.93,
+    "correct": true
+  },
+  {
+    "filer": "SPCX",
+    "counterparty": "xAI",
+    "gold": "absorbed_unit_debt",
+    "pred": "absorbed_unit_debt",
+    "conf": 0.94,
+    "financing_p": 0.18,
+    "correct": true
+  },
+  {
+    "filer": "MSFT",
+    "counterparty": "OpenAI",
+    "gold": "related_party_revenue_with_stake",
+    "pred": "related_party_revenue_with_stake",
+    "conf": 0.86,
+    "financing_p": 0.87,
+    "correct": true
+  },
+  {
+    "filer": "SPCX",
+    "counterparty": "Tesla",
+    "gold": "related_party_supply",
+    "pred": "related_party_supply",
+    "conf": 0.8,
+    "financing_p": 0.2,
+    "correct": true
+  },
+  {
+    "filer": "ORCL",
+    "counterparty": "(backlog counterparty \u2014 not named)",
+    "gold": "refuted",
+    "pred": "unsigned_supply_relationship",
+    "conf": 0.79,
+    "financing_p": 0.04,
+    "correct": false
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "Tesla",
+    "gold": "refuted",
+    "pred": "refuted",
+    "conf": 0.97,
+    "financing_p": 0.05,
+    "correct": true
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "Lambda",
+    "gold": "refuted",
+    "pred": "refuted",
+    "conf": 1.0,
+    "financing_p": 0.05,
+    "correct": true
+  },
+  {
+    "filer": "META",
+    "counterparty": "Anthropic",
+    "gold": "refuted",
+    "pred": "refuted",
+    "conf": 1.0,
+    "financing_p": 0.03,
+    "correct": true
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "Anthropic",
+    "gold": "unsigned_supply_relationship",
+    "pred": "unsigned_supply_relationship",
+    "conf": 0.94,
+    "financing_p": 0.42,
+    "correct": true
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "Lambda",
+    "gold": "refuted",
+    "pred": "refuted",
+    "conf": 1.0,
+    "financing_p": 0.05,
+    "correct": true
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "Crusoe",
+    "gold": "refuted",
+    "pred": "refuted",
+    "conf": 1.0,
+    "financing_p": 0.05,
+    "correct": true
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "Databricks",
+    "gold": "refuted",
+    "pred": "refuted",
+    "conf": 0.65,
+    "financing_p": 0.03,
+    "correct": true
+  },
+  {
+    "filer": "ORCL",
+    "counterparty": "OpenAI",
+    "gold": "refuted",
+    "pred": "refuted",
+    "conf": 0.97,
+    "financing_p": 0.11,
+    "correct": true
+  }
+]
