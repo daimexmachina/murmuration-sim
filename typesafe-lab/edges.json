@@ -1,0 +1,609 @@
+[
+  {
+    "filer": "MSFT",
+    "counterparty": "OpenAI",
+    "hits": 19,
+    "dates": [
+      "2026-09-02",
+      "2026-07-29",
+      "2026-04-29"
+    ]
+  },
+  {
+    "filer": "MSFT",
+    "counterparty": "Anthropic",
+    "hits": 3,
+    "dates": [
+      "2026-07-29",
+      "2024-12-03",
+      "2024-07-30"
+    ]
+  },
+  {
+    "filer": "MSFT",
+    "counterparty": "Databricks",
+    "hits": 2,
+    "dates": [
+      "2024-12-03",
+      "2024-07-30"
+    ]
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "OpenAI",
+    "hits": 10,
+    "dates": [
+      "2026-07-31",
+      "2026-07-30",
+      "2026-04-30"
+    ]
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "Anthropic",
+    "hits": 24,
+    "dates": [
+      "2026-07-31",
+      "2026-07-30",
+      "2026-04-30"
+    ]
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "Databricks",
+    "hits": 3,
+    "dates": [
+      "2024-10-31",
+      "2024-08-01",
+      "2024-04-30"
+    ]
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "Lambda",
+    "hits": 2,
+    "dates": [
+      "2026-07-30",
+      "2024-02-02"
+    ]
+  },
+  {
+    "filer": "AMZN",
+    "counterparty": "NVIDIA",
+    "hits": 10,
+    "dates": [
+      "2026-07-31",
+      "2026-04-29",
+      "2026-04-09"
+    ]
+  },
+  {
+    "filer": "META",
+    "counterparty": "Anthropic",
+    "hits": 2,
+    "dates": [
+      "2026-04-30",
+      "2026-01-29"
+    ]
+  },
+  {
+    "filer": "ORCL",
+    "counterparty": "OpenAI",
+    "hits": 2,
+    "dates": [
+      "2025-09-09",
+      "2025-03-10"
+    ]
+  },
+  {
+    "filer": "ORCL",
+    "counterparty": "xAI",
+    "hits": 2,
+    "dates": [
+      "2025-09-09",
+      "2025-03-10"
+    ]
+  },
+  {
+    "filer": "ORCL",
+    "counterparty": "Stargate",
+    "hits": 1,
+    "dates": [
+      "2025-03-10"
+    ]
+  },
+  {
+    "filer": "ORCL",
+    "counterparty": "NVIDIA",
+    "hits": 4,
+    "dates": [
+      "2025-12-10",
+      "2025-03-10",
+      "2024-12-09"
+    ]
+  },
+  {
+    "filer": "IBM",
+    "counterparty": "Anthropic",
+    "hits": 2,
+    "dates": [
+      "2026-02-24",
+      "2025-10-23"
+    ]
+  },
+  {
+    "filer": "IBM",
+    "counterparty": "CoreWeave",
+    "hits": 1,
+    "dates": [
+      "2025-01-30"
+    ]
+  },
+  {
+    "filer": "IBM",
+    "counterparty": "NVIDIA",
+    "hits": 3,
+    "dates": [
+      "2026-02-24",
+      "2025-02-04",
+      "2024-04-25"
+    ]
+  },
+  {
+    "filer": "CRM",
+    "counterparty": "Anthropic",
+    "hits": 1,
+    "dates": [
+      "2026-08-27"
+    ]
+  },
+  {
+    "filer": "CRM",
+    "counterparty": "NVIDIA",
+    "hits": 1,
+    "dates": [
+      "2025-07-09"
+    ]
+  },
+  {
+    "filer": "PLTR",
+    "counterparty": "NVIDIA",
+    "hits": 1,
+    "dates": [
+      "2026-05-04"
+    ]
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "OpenAI",
+    "hits": 9,
+    "dates": [
+      "2026-08-26",
+      "2026-08-17",
+      "2026-02-25"
+    ]
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "Anthropic",
+    "hits": 3,
+    "dates": [
+      "2026-02-25",
+      "2025-11-19"
+    ]
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "xAI",
+    "hits": 2,
+    "dates": [
+      "2025-11-19",
+      "2024-11-20"
+    ]
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "CoreWeave",
+    "hits": 7,
+    "dates": [
+      "2026-08-26",
+      "2026-02-25",
+      "2025-11-19"
+    ]
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "Databricks",
+    "hits": 1,
+    "dates": [
+      "2025-05-28"
+    ]
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "Stargate",
+    "hits": 2,
+    "dates": [
+      "2025-05-28",
+      "2025-02-26"
+    ]
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "Tesla",
+    "hits": 3,
+    "dates": [
+      "2026-02-25",
+      "2025-02-26",
+      "2024-02-21"
+    ]
+  },
+  {
+    "filer": "NVDA",
+    "counterparty": "NVIDIA",
+    "hits": 136,
+    "dates": [
+      "2026-09-03",
+      "2026-08-26",
+      "2026-08-17"
+    ]
+  },
+  {
+    "filer": "AMD",
+    "counterparty": "OpenAI",
+    "hits": 14,
+    "dates": [
+      "2026-08-05",
+      "2026-08-04",
+      "2026-05-06"
+    ]
+  },
+  {
+    "filer": "AMD",
+    "counterparty": "Anthropic",
+    "hits": 2,
+    "dates": [
+      "2026-08-04"
+    ]
+  },
+  {
+    "filer": "AMD",
+    "counterparty": "xAI",
+    "hits": 1,
+    "dates": [
+      "2025-08-05"
+    ]
+  },
+  {
+    "filer": "AMD",
+    "counterparty": "Databricks",
+    "hits": 2,
+    "dates": [
+      "2024-10-29",
+      "2024-01-30"
+    ]
+  },
+  {
+    "filer": "AMD",
+    "counterparty": "NVIDIA",
+    "hits": 20,
+    "dates": [
+      "2026-08-05",
+      "2026-05-06",
+      "2026-02-04"
+    ]
+  },
+  {
+    "filer": "INTC",
+    "counterparty": "xAI",
+    "hits": 1,
+    "dates": [
+      "2026-04-23"
+    ]
+  },
+  {
+    "filer": "INTC",
+    "counterparty": "Tesla",
+    "hits": 1,
+    "dates": [
+      "2026-04-23"
+    ]
+  },
+  {
+    "filer": "INTC",
+    "counterparty": "NVIDIA",
+    "hits": 14,
+    "dates": [
+      "2026-07-23",
+      "2026-04-23",
+      "2026-01-23"
+    ]
+  },
+  {
+    "filer": "SPCX",
+    "counterparty": "xAI",
+    "hits": 2,
+    "dates": [
+      "2026-08-04",
+      "2026-06-16"
+    ]
+  },
+  {
+    "filer": "SPCX",
+    "counterparty": "Tesla",
+    "hits": 1,
+    "dates": [
+      "2026-08-04"
+    ]
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "OpenAI",
+    "hits": 24,
+    "dates": [
+      "2026-09-17",
+      "2026-08-12",
+      "2026-06-18"
+    ]
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "Anthropic",
+    "hits": 2,
+    "dates": [
+      "2026-09-17",
+      "2026-05-07"
+    ]
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "CoreWeave",
+    "hits": 145,
+    "dates": [
+      "2026-09-17",
+      "2026-08-12",
+      "2026-08-11"
+    ]
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "Databricks",
+    "hits": 1,
+    "dates": [
+      "2026-08-11"
+    ]
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "Lambda",
+    "hits": 3,
+    "dates": [
+      "2025-11-13",
+      "2025-08-13",
+      "2025-05-15"
+    ]
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "Crusoe",
+    "hits": 3,
+    "dates": [
+      "2025-11-13",
+      "2025-08-13",
+      "2025-05-15"
+    ]
+  },
+  {
+    "filer": "CRWV",
+    "counterparty": "NVIDIA",
+    "hits": 22,
+    "dates": [
+      "2026-09-17",
+      "2026-08-12",
+      "2026-08-11"
+    ]
+  },
+  {
+    "filer": "APLD",
+    "counterparty": "OpenAI",
+    "hits": 2,
+    "dates": [
+      "2026-04-23",
+      "2025-10-22"
+    ]
+  },
+  {
+    "filer": "APLD",
+    "counterparty": "xAI",
+    "hits": 1,
+    "dates": [
+      "2026-04-23"
+    ]
+  },
+  {
+    "filer": "APLD",
+    "counterparty": "CoreWeave",
+    "hits": 45,
+    "dates": [
+      "2026-07-29",
+      "2026-07-27",
+      "2026-06-16"
+    ]
+  },
+  {
+    "filer": "APLD",
+    "counterparty": "Lambda",
+    "hits": 2,
+    "dates": [
+      "2024-08-30",
+      "2024-07-19"
+    ]
+  },
+  {
+    "filer": "APLD",
+    "counterparty": "Crusoe",
+    "hits": 2,
+    "dates": [
+      "2024-08-30",
+      "2024-07-19"
+    ]
+  },
+  {
+    "filer": "APLD",
+    "counterparty": "Tesla",
+    "hits": 1,
+    "dates": [
+      "2026-07-27"
+    ]
+  },
+  {
+    "filer": "APLD",
+    "counterparty": "NVIDIA",
+    "hits": 20,
+    "dates": [
+      "2026-06-16",
+      "2026-04-23",
+      "2026-03-10"
+    ]
+  },
+  {
+    "filer": "IREN",
+    "counterparty": "CoreWeave",
+    "hits": 2,
+    "dates": [
+      "2026-08-27",
+      "2025-08-28"
+    ]
+  },
+  {
+    "filer": "IREN",
+    "counterparty": "Lambda",
+    "hits": 2,
+    "dates": [
+      "2026-08-27",
+      "2025-08-28"
+    ]
+  },
+  {
+    "filer": "IREN",
+    "counterparty": "Crusoe",
+    "hits": 2,
+    "dates": [
+      "2026-08-27",
+      "2025-08-28"
+    ]
+  },
+  {
+    "filer": "IREN",
+    "counterparty": "NVIDIA",
+    "hits": 22,
+    "dates": [
+      "2026-08-27",
+      "2026-08-13",
+      "2026-08-04"
+    ]
+  },
+  {
+    "filer": "CIFR",
+    "counterparty": "Anthropic",
+    "hits": 1,
+    "dates": [
+      "2025-08-07"
+    ]
+  },
+  {
+    "filer": "CIFR",
+    "counterparty": "CoreWeave",
+    "hits": 1,
+    "dates": [
+      "2026-02-24"
+    ]
+  },
+  {
+    "filer": "CIFR",
+    "counterparty": "NVIDIA",
+    "hits": 1,
+    "dates": [
+      "2024-10-31"
+    ]
+  },
+  {
+    "filer": "DELL",
+    "counterparty": "Anthropic",
+    "hits": 1,
+    "dates": [
+      "2025-10-07"
+    ]
+  },
+  {
+    "filer": "DELL",
+    "counterparty": "xAI",
+    "hits": 1,
+    "dates": [
+      "2025-02-27"
+    ]
+  },
+  {
+    "filer": "DELL",
+    "counterparty": "CoreWeave",
+    "hits": 1,
+    "dates": [
+      "2025-10-07"
+    ]
+  },
+  {
+    "filer": "DELL",
+    "counterparty": "NVIDIA",
+    "hits": 3,
+    "dates": [
+      "2025-10-07",
+      "2024-05-30",
+      "2024-02-29"
+    ]
+  },
+  {
+    "filer": "SMCI",
+    "counterparty": "Lambda",
+    "hits": 8,
+    "dates": [
+      "2026-08-31",
+      "2026-01-02",
+      "2025-08-28"
+    ]
+  },
+  {
+    "filer": "SMCI",
+    "counterparty": "Crusoe",
+    "hits": 1,
+    "dates": [
+      "2026-01-02"
+    ]
+  },
+  {
+    "filer": "SMCI",
+    "counterparty": "NVIDIA",
+    "hits": 15,
+    "dates": [
+      "2026-08-31",
+      "2026-06-09",
+      "2026-05-11"
+    ]
+  },
+  {
+    "filer": "VRT",
+    "counterparty": "CoreWeave",
+    "hits": 1,
+    "dates": [
+      "2026-02-13"
+    ]
+  },
+  {
+    "filer": "VRT",
+    "counterparty": "NVIDIA",
+    "hits": 2,
+    "dates": [
+      "2026-02-13",
+      "2025-04-23"
+    ]
+  }
+]

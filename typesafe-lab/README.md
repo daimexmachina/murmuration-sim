@@ -110,7 +110,46 @@ for the 47-edge scan, where 24 edges are unread and every unread edge currently 
 ⚠ **Cost:** ~2 API calls per edge in one request each; token usage was not tracked per edge in
 this run. Measure real cost and latency before wiring it to 47+ edges.
 
+## Edge triage against the real scan (`triage.py`) — the thing that gets used
+
+Ran `bubble-watch circular --offline`: **67 edges across 20 filers, 0 failed queries**, all served
+from the 889 cached search responses. Only **5** edges carry a hardcoded `verified_passage`, so
+~62 are unread, and unread edges score ZERO (the rubric's own stated bias toward CALM).
+
+`triage.py` closes that gap without classifying anything: for each edge it searches EDGAR
+full-text for the filing behind the hit, **fetches the primary document** from
+`sec.gov/Archives`, strips it to text, extracts a ~1,400-char window around the counterparty
+mention, then asks Jev three things per edge — is this a financing entanglement, what kind, and
+is it worth a human read. Real prose confirmed, e.g. NVDA FY2026 10-K: *"We are finalizing an
+investment and partnership agreement with OpenAI."*
+
+**Control validation** — the 5 hand-read edges were run through the pipeline as a blind check:
+
+| edge | gold (human read) | Jev `financing_p` | rank |
+| --- | --- | --- | --- |
+| MSFT x OpenAI | real, ASC 850 revenue | 0.99 | 5/23 |
+| AMD x OpenAI | real, warrant/8-K | 0.97 | 2/23 |
+| SPCX x Tesla | real, related-party | 0.91 | 4/23 |
+| SPCX x xAI | real, absorbed debt | 0.79 | 12/23 |
+| **ORCL x OpenAI** | **REFUTATION** | **0.24** | **16/23** |
+
+All four real structures land in the top 12; the refutation lands below **every** one of them
+(separation +0.68). That is the specific false positive the project says keyword counting cannot
+avoid — and the ranking did not reproduce it.
+
+**Effect on the queue: 62 unread edges -> 12 above `financing_p` ≥ 0.8.**
+At ≥0.5 it keeps 12 plus the same set; at ≥0.7, 12; at ≥0.8, 9. Use 0.8 as a starting cut.
+
+⚠ **Rank, don't record.** `financing_p` is a usable *ranking* signal. The fine-grained `kind`
+label is not: mean `kind_conf` across the top 12 was 0.71, as low as 0.22 (SPCX x xAI). Feed it
+to a human as a reading order, never write `kind` down as a finding.
+
+⚠ One suspicious result worth a human look: **INTC x NVIDIA scored 0.97 `financing_structure`** —
+plausibly a misread (Intel naming NVIDIA as a competitor/customer), which is exactly the kind of
+error the human read exists to catch. Verify that one first.
+
 ## Next
 
-Nothing here is wired into a real project yet. The natural next step is fixing the passage
-extraction above and re-measuring; after that, bubble-watch triage of the 24 unread edges.
+Remaining work: (a) run the rest of the 65 candidate edges, not just the top 20; (b) per-edge
+token/cost accounting, still unmeasured; (c) fix the `circular_pilot.py` passage assembly
+(see above) before treating its 83% as meaningful.
