@@ -82,13 +82,48 @@ def parse_entries() -> tuple[list[dict], dict[str, str]]:
         if rec.get("structure"):
             # label this project uses
             rec["label"] = snake(rec["structure"])
-            # the passage Jev gets: verbatim text when read word-for-word, else the
-            # quoted material carried in the citation + magnitude.
-            passage = rec.get("verbatim") or ""
-            if len(passage) < 120:
-                quoted = re.findall(r'"([^"]{25,})"', rec.get("citation", "") + " " + rec.get("magnitude", ""))
-                passage = (passage + " " + " ".join(quoted)).strip()
-            rec["passage"] = passage or rec.get("citation", "")
+            # ASSEMBLE WHAT THE HUMAN ACTUALLY READ. The first version of this file fed Jev
+            # only `verbatim` when present, which is wrong: for the CRWV/AMZN entries the
+            # verbatim text is a single disclosure while the human label rests on reading
+            # SEVERAL excerpts together (the rubric's own note says so). A model given one
+            # passage cannot reproduce a label built from many, so the benchmark was
+            # measuring its own assembly. Concatenate every primary-source excerpt the entry
+            # carries: verbatim + the quoted material inside citation and magnitude.
+            parts = []
+            if rec.get("verbatim"):
+                parts.append(rec["verbatim"])
+            for field in ("citation", "magnitude"):
+                raw = rec.get(field, "")
+                # the rubric quotes with BOTH quote styles; matching only double quotes
+                # silently produced empty passages for the single-quoted entries.
+                parts += re.findall(r'"([^"]{25,})"', raw)
+                # single-quoted spans: the lookbehind stops a possessive apostrophe
+                # (e.g. "AMD's") being read as an opening quote.
+                parts += re.findall(r"(?<=[\s:,])'([^']{25,}?)'(?=[\s.,;)]|$)", raw)
+            # dedupe while preserving order
+            seen, assembled = set(), []
+            for p in parts:
+                k = p[:120]
+                if k not in seen:
+                    seen.add(k); assembled.append(p)
+            # FALLBACK, and a benchmark caveat worth stating: some entries carry no quoted
+            # span at all (the citation is already a factual description of the filing, e.g.
+            # "AMD issued OpenAI a warrant for up to 160,000,000 shares at a $0.01 exercise
+            # price..."). Use that description so the entry is not empty — but it IS the
+            # human's own summary, so those entries are easier than a raw-filing test.
+            used_fallback = False
+            if not assembled or len(" ".join(assembled)) < 300:
+                for field in ("citation", "magnitude"):
+                    if rec.get(field) and rec[field] not in assembled:
+                        assembled.append(rec[field])
+                        used_fallback = True
+            passage = " ".join(assembled).strip()
+            # Do NOT include `falsifier` (that is analysis) or the human's own
+            # structure/scale words (that is the answer).
+            rec["passage"] = passage
+            rec["passage_thin"] = (rec.get("verbatim") or "").strip() or passage
+            rec["n_excerpts"] = len(assembled)
+            rec["passage_is_citation_summary"] = used_fallback
             entries.append(rec)
     return entries, classes
 
@@ -102,6 +137,12 @@ CRITERIA_EXTRA = {
 def main() -> None:
     entries, classes = parse_entries()
     dry = "--dry" in sys.argv
+    # PASSAGE MODE. "thin" = the original behaviour (verbatim when present, else the quoted
+    # spans): measured 19/23. "enriched" = concatenate every excerpt the entry carries
+    # (verbatim + quoted spans + citation/magnitude summary): measured 17/23, and it fixed
+    # NONE of the persistent misses while breaking two entries that had been right. Kept
+    # runnable so the comparison is reproducible rather than asserted.
+    mode = "enriched" if "--enriched" in sys.argv else "thin"
 
     print(f"parsed {len(entries)} labeled edges; {len(classes)} structure classes from the enum\n")
     from collections import Counter
@@ -120,11 +161,13 @@ def main() -> None:
     criteria.update(CRITERIA_EXTRA)
 
     results = []
+    print(f"passage mode: {mode}\n")
     for i, e in enumerate(entries, 1):
+        passage = e["passage_thin"] if mode == "thin" else e["passage"]
         state = {
             "filer": e["filer"],
             "counterparty": e["counterparty"],
-            "passage": e["passage"],
+            "passage": passage,
         }
         questions = {
             "is_financing": {
@@ -145,6 +188,8 @@ def main() -> None:
             "conf": ans["structure"]["confidence"],
             "financing_p": ans["is_financing"]["noul"],
             "correct": pred == e["label"],
+            "passage_chars": len(passage),
+            "passage_includes_citation_summary": e.get("passage_is_citation_summary", False) and mode == "enriched",
         }
         results.append(rec)
         mark = "ok " if rec["correct"] else "MISS"
@@ -185,6 +230,20 @@ def main() -> None:
     out = "/home/daim/workspace/typesafe-lab/circular_pilot_results.json"
     json.dump(results, open(out, "w"), indent=2)
     print(f"\nwrote {out}")
+
+    # Report accuracy split, because entries whose passage had to include the human's own
+    # citation summary are easier than raw-filing entries.
+    enriched = [r for r in results if r["passage_includes_citation_summary"]]
+    raw_only = [r for r in results if not r["passage_includes_citation_summary"]]
+    if enriched:
+        print(f"\n=== split by passage provenance (benchmark honesty) ===")
+        if raw_only:
+            c1 = sum(r["correct"] for r in raw_only)
+            print(f"  verbatim-only passages : {c1}/{len(raw_only)} = {c1/len(raw_only):.0%}")
+        c2 = sum(r["correct"] for r in enriched)
+        print(f"  passages including the human's citation summary (easier): "
+              f"{c2}/{len(enriched)} = {c2/len(enriched):.0%}")
+
     print("\nLIMITS: n=23, single run (Jev is not deterministic), and the labels come from the")
     print("same project being piloted. Treat as a pilot, not a validation.")
 

@@ -1,0 +1,60 @@
+parsed 23 labeled edges; 13 structure classes from the enum
+
+ground-truth label distribution:
+   8  refuted
+   4  vendor_financing_its_own_customer
+   1  supplier_holding_customer_equity
+   1  vendor_sublicensing_its_own_lease_liability
+   1  landlord_debt_secured_by_tenant_credit
+   1  vendor_organised_third_party_capital
+   1  supply_commitment_scaled_to_financed_demand
+   1  supplier_guarantee_and_investment
+   1  equity_for_purchases
+   1  absorbed_unit_debt
+   1  related_party_revenue_with_stake
+   1  related_party_supply
+   1  unsigned_supply_relationship
+
+passage mode: thin
+
+[ 1/23] MISS gold=vendor_financing_its_own_customer      pred=unsigned_supply_relationship           conf=0.75 fin=0.52
+[ 2/23] MISS gold=vendor_financing_its_own_customer      pred=supply_commitment_scaled_to_financed_demand conf=0.26 fin=0.74
+[ 3/23] ok  gold=vendor_financing_its_own_customer      pred=vendor_financing_its_own_customer      conf=0.98 fin=0.95
+[ 4/23] MISS gold=vendor_financing_its_own_customer      pred=supplier_guarantee_and_investment      conf=0.73 fin=0.93
+[ 5/23] ok  gold=supplier_holding_customer_equity       pred=supplier_holding_customer_equity       conf=0.97 fin=0.72
+[ 6/23] ok  gold=vendor_sublicensing_its_own_lease_liability pred=vendor_sublicensing_its_own_lease_liability conf=0.96 fin=0.62
+[ 7/23] ok  gold=landlord_debt_secured_by_tenant_credit pred=landlord_debt_secured_by_tenant_credit conf=0.77 fin=0.54
+[ 8/23] ok  gold=vendor_organised_third_party_capital   pred=vendor_organised_third_party_capital   conf=0.82 fin=0.46
+[ 9/23] ok  gold=supply_commitment_scaled_to_financed_demand pred=supply_commitment_scaled_to_financed_demand conf=0.49 fin=0.33
+[10/23] ok  gold=supplier_guarantee_and_investment      pred=supplier_guarantee_and_investment      conf=0.94 fin=0.93
+[11/23] ok  gold=equity_for_purchases                   pred=equity_for_purchases                   conf=0.97 fin=0.93
+[12/23] ok  gold=absorbed_unit_debt                     pred=absorbed_unit_debt                     conf=0.80 fin=0.40
+[13/23] MISS gold=related_party_revenue_with_stake       pred=supplier_guarantee_and_investment      conf=0.32 fin=0.87
+[14/23] ok  gold=related_party_supply                   pred=related_party_supply                   conf=0.65 fin=0.24
+[15/23] MISS gold=refuted                                pred=unsigned_supply_relationship           conf=0.78 fin=0.04
+[16/23] ok  gold=refuted                                pred=refuted                                conf=1.00 fin=0.03
+[17/23] ok  gold=refuted                                pred=refuted                                conf=1.00 fin=0.04
+[18/23] ok  gold=refuted                                pred=refuted                                conf=1.00 fin=0.03
+[19/23] ok  gold=unsigned_supply_relationship           pred=unsigned_supply_relationship           conf=0.96 fin=0.39
+[20/23] ok  gold=refuted                                pred=refuted                                conf=1.00 fin=0.05
+[21/23] ok  gold=refuted                                pred=refuted                                conf=1.00 fin=0.05
+[22/23] ok  gold=refuted                                pred=refuted                                conf=0.65 fin=0.03
+[23/23] ok  gold=refuted                                pred=refuted                                conf=1.00 fin=0.06
+
+=== choice accuracy: 18/23 = 78% ===
+
+=== the hard-negative test (does `is_financing` separate them?) ===
+  REFUTED edges (n=8): financing_p = [0.04, 0.03, 0.04, 0.03, 0.05, 0.05, 0.03, 0.06]
+  REAL edges    (n=14): financing_p = [0.52, 0.74, 0.95, 0.93, 0.72, 0.62, 0.54, 0.46, 0.33, 0.93, 0.93, 0.4, 0.87, 0.24]
+  mean real 0.66 vs mean refuted 0.04  (separation +0.61)
+  at midpoint threshold 0.35: 12/14 real kept, 0/8 refutations wrongly kept
+
+=== calibration: do the misses carry low confidence? ===
+  correct: n=18 mean conf 0.89  min 0.49
+  WRONG  : n=5 mean conf 0.57  min 0.26
+  wrong answers at conf >= 0.7 (would pass a gate): 3/5
+
+wrote /home/daim/workspace/typesafe-lab/circular_pilot_results.json
+
+LIMITS: n=23, single run (Jev is not deterministic), and the labels come from the
+same project being piloted. Treat as a pilot, not a validation.

@@ -100,22 +100,44 @@ def strip_html(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
-def passage_around(text: str, name: str) -> str:
-    """The primary-source excerpt a human would read: text around the name mention."""
+def passage_around(text: str, name: str, top: int = 3) -> str:
+    """The primary-source excerpt a human would read.
+
+    DEFECT FIXED HERE. The first version scored candidate windows by a bag of finance-ish
+    keywords in the window. On CRWV x NVIDIA that selected a revenue-by-geography table
+    merely because it sat near an unrelated 'NVIDIA' mention, while the actual equity
+    disclosure was a different window entirely. Keyword counting is the same failure mode
+    this project criticises elsewhere, so proximity to a FINANCIAL VERB (and to the
+    disclosure's own heading) is now weighted, and the top windows are returned joined so
+    the human sees the evidence rather than a lucky/unlucky single crop.
+    """
     hits = [m.start() for m in re.finditer(re.escape(name), text, re.I)]
     if not hits:
         return ""
-    # a mention with finance-ish words nearby is more informative than the first one
-    keys = ("invest", "equity", "warrant", "loan", "guarantee", "revenue", "related part",
-            "commit", "convertible", "stake", "purchase", "agreement", "note")
-    best, best_score = hits[0], -1
-    for h in hits[:40]:
-        seg = text[max(0, h - WINDOW): h + WINDOW].lower()
-        score = sum(k in seg for k in keys)
-        if score > best_score:
-            best, best_score = h, score
-    seg = text[max(0, best - WINDOW): best + WINDOW]
-    return seg.strip()
+    # verbs/nouns that signal an actual transaction, weighted above generic finance words
+    strong = ("acquired", "purchase price", "private placement", "entered into an agreement",
+              "invested", "investment and partnership", "warrant", "convertible note",
+              "preferred stock", "shares of our common stock", "equity method",
+              "related party", "revenue from", "lease", "commitment")
+    weak = ("invest", "equity", "loan", "guarantee", "revenue", "stake", "agreement", "note",
+            "securities", "fair value", "balance sheet")
+    scored = []
+    for h in hits[:60]:
+        seg = text[max(0, h - WINDOW): h + WINDOW]
+        low = seg.lower()
+        s = sum(3 for k in strong if k in low) + sum(1 for k in weak if k in low)
+        scored.append((s, -h, h))
+    scored.sort(reverse=True)
+    chosen, seen_ranges = [], []
+    for _s, _neg, h in scored:
+        lo, hi = max(0, h - WINDOW), h + WINDOW
+        if any(lo < b and hi > a for a, b in seen_ranges):  # overlapping: skip
+            continue
+        seen_ranges.append((lo, hi))
+        chosen.append(text[lo:hi].strip())
+        if len(chosen) >= top:
+            break
+    return "\n---\n".join(chosen) if len(chosen) > 1 else (chosen[0] if chosen else "")
 
 
 QUESTIONS = {
@@ -149,6 +171,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--edges", default="edges.json")
     ap.add_argument("--limit", type=int, default=20)
+    ap.add_argument("--all", action="store_true", help="triage every candidate edge, not just the top N")
     ap.add_argument("--start", default="2024-01-01")
     ap.add_argument("--end", default="2026-09-20")
     ap.add_argument("--csv", default=None)
@@ -162,7 +185,7 @@ def main() -> None:
 
     cand = [e for e in edges if (e["filer"], e["counterparty"]) not in SELF_MATCHES]
     cand.sort(key=lambda e: -e["hits"])
-    sample = cand[: args.limit]
+    sample = list(cand) if args.all else cand[: args.limit]
     # Always include the 5 hand-read edges so the ranking has a control set in it.
     controls = {("MSFT", "OpenAI"), ("AMD", "OpenAI"), ("SPCX", "Tesla"),
                 ("SPCX", "xAI"), ("ORCL", "OpenAI")}
@@ -177,6 +200,7 @@ def main() -> None:
     rows = []
     for i, e in enumerate(sample, 1):
         filer, cp = e["filer"], e["counterparty"]
+        t0 = time.time()
         print(f"[{i}/{len(sample)}] {filer} x {cp} (hits={e['hits']})")
         cik = ciks.get(filer)
         if not cik:
@@ -194,7 +218,9 @@ def main() -> None:
         if len(passage) < 80:
             print("    passage too short to judge")
             continue
-        ans = call({"filer": filer, "counterparty": cp, "passage": passage}, QUESTIONS)["answers"]
+        ans_raw = call({"filer": filer, "counterparty": cp, "passage": passage}, QUESTIONS)
+        ans = ans_raw["answers"]
+        usage = ans_raw.get("usage") or {}
         row = {
             "filer": filer, "counterparty": cp, "hits": e["hits"],
             "form": f["form"], "filing_date": f["date"], "url": f["url"],
@@ -203,6 +229,9 @@ def main() -> None:
             "kind": ans["mention_kind"]["choice"],
             "kind_conf": ans["mention_kind"]["confidence"],
             "worth_read_p": ans["worth_human_read"]["noul"],
+            "in_tokens": usage.get("input_tokens"),
+            "out_tokens": usage.get("output_tokens"),
+            "seconds": round(time.time() - t0, 1),
         }
         rows.append(row)
         print(f"    financing={row['financing_p']:.2f}  kind={row['kind']}  "
@@ -229,6 +258,22 @@ def main() -> None:
             w = csv.DictWriter(fh, fieldnames=list(rows[0]))
             w.writeheader(); w.writerows(rows)
         print(f"\nwrote {args.csv}")
+
+    # ---- cost accounting: what a full sweep actually costs ----
+    if rows:
+        tin = sum(r["in_tokens"] or 0 for r in rows)
+        tout = sum(r["out_tokens"] or 0 for r in rows)
+        secs = sum(r["seconds"] or 0 for r in rows)
+        n = len(rows)
+        print(f"\n=== COST OF THIS RUN ({n} edges judged) ===")
+        print(f"  input tokens : {tin:,} (mean {tin//n:,}/edge)")
+        print(f"  output tokens: {tout:,} (mean {tout//n:,}/edge)")
+        print(f"  wall time    : {secs:.0f}s for Jev (mean {secs/n:.1f}s/edge), plus EDGAR fetches")
+        full = len(cand)
+        print(f"\n  PROJECTION to the full {full}-edge scan: "
+              f"~{tin//n*full:,} in / ~{tout//n*full:,} out tokens, "
+              f"~{secs/n*full/60:.0f} min of Jev wall time")
+        print("  (2 API calls are batched into ONE request per edge, so no fan-out cost.)")
 
 
 if __name__ == "__main__":

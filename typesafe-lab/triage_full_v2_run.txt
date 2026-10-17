@@ -1,0 +1,217 @@
+67 edges; excluding 2 self-matches -> 65 candidates; triaging top 20 by hit count + 5 hand-read controls = 65 edges
+
+[1/65] APLD x CoreWeave (hits=45)
+    financing=0.98  kind=customer_concentration  worth_read=0.82  [10-K 2026-07-29]
+[2/65] AMZN x Anthropic (hits=24)
+    financing=0.99  kind=financing_structure  worth_read=0.77  [10-K 2026-02-06]
+[3/65] CRWV x OpenAI (hits=24)
+    financing=0.81  kind=supply_agreement  worth_read=0.79  [10-K 2026-03-02]
+[4/65] CRWV x NVIDIA (hits=22)
+    financing=0.94  kind=related_party_transaction  worth_read=0.79  [10-K 2026-03-02]
+[5/65] IREN x NVIDIA (hits=22)
+    financing=0.76  kind=supply_agreement  worth_read=0.86  [10-K 2025-08-28]
+[6/65] AMD x NVIDIA (hits=20)
+    financing=0.02  kind=competitor_or_marketing  worth_read=0.52  [10-K 2025-02-05]
+[7/65] APLD x NVIDIA (hits=20)
+    financing=0.97  kind=financing_structure  worth_read=0.74  [10-K 2025-07-30]
+[8/65] MSFT x OpenAI (hits=19)
+    financing=0.99  kind=related_party_transaction  worth_read=0.75  [10-K 2026-07-29]
+[9/65] SMCI x NVIDIA (hits=15)
+    financing=0.09  kind=competitor_or_marketing  worth_read=0.56  [10-K 2026-08-31]
+[10/65] AMD x OpenAI (hits=14)
+    financing=0.98  kind=supply_agreement  worth_read=0.79  [10-K 2026-02-04]
+[11/65] INTC x NVIDIA (hits=14)
+    financing=0.97  kind=financing_structure  worth_read=0.76  [10-K 2026-01-23]
+[12/65] AMZN x OpenAI (hits=10)
+    financing=0.96  kind=supply_agreement  worth_read=0.83  [8-K 2026-02-27]
+[13/65] AMZN x NVIDIA (hits=10)
+    financing=0.08  kind=supply_agreement  worth_read=0.68  [8-K 2024-04-30]
+[14/65] NVDA x OpenAI (hits=9)
+    financing=0.89  kind=financing_structure  worth_read=0.77  [10-K 2026-02-25]
+[15/65] SMCI x Lambda (hits=8)
+    financing=0.43  kind=supply_agreement  worth_read=0.69  [10-K 2025-08-28]
+[16/65] NVDA x CoreWeave (hits=7)
+    financing=0.13  kind=other_unrelated  worth_read=0.71  [8-K 2025-11-19]
+[17/65] ORCL x NVIDIA (hits=4)
+    financing=0.26  kind=customer_concentration  worth_read=0.66  [8-K 2025-12-10]
+[18/65] MSFT x Anthropic (hits=3)
+    financing=0.04  kind=competitor_or_marketing  worth_read=0.54  [10-K 2024-07-30]
+[19/65] AMZN x Databricks (hits=3)
+    financing=0.10  kind=supply_agreement  worth_read=0.67  [8-K 2024-10-31]
+[20/65] IBM x NVIDIA (hits=3)
+    financing=0.05  kind=competitor_or_marketing  worth_read=0.63  [10-K 2026-02-24]
+[21/65] NVDA x Anthropic (hits=3)
+    financing=0.11  kind=supply_agreement  worth_read=0.76  [8-K 2025-11-19]
+[22/65] NVDA x Tesla (hits=3)
+    financing=0.04  kind=competitor_or_marketing  worth_read=0.66  [10-K 2026-02-25]
+[23/65] CRWV x Lambda (hits=3)
+    financing=0.03  kind=competitor_or_marketing  worth_read=0.56  [10-Q 2025-05-15]
+[24/65] CRWV x Crusoe (hits=3)
+    financing=0.05  kind=competitor_or_marketing  worth_read=0.60  [10-Q 2025-05-15]
+[25/65] DELL x NVIDIA (hits=3)
+    financing=0.06  kind=competitor_or_marketing  worth_read=0.65  [8-K 2024-05-30]
+[26/65] MSFT x Databricks (hits=2)
+    financing=0.02  kind=competitor_or_marketing  worth_read=0.50  [10-K 2024-07-30]
+[27/65] AMZN x Lambda (hits=2)
+    financing=0.04  kind=product_or_model_mention  worth_read=0.33  [10-K 2024-02-02]
+[28/65] META x Anthropic (hits=2)
+    financing=0.03  kind=other_unrelated  worth_read=0.31  [10-K 2026-01-29]
+[29/65] ORCL x OpenAI (hits=2)
+    financing=0.25  kind=customer_concentration  worth_read=0.69  [8-K 2025-03-10]
+[30/65] ORCL x xAI (hits=2)
+    financing=0.25  kind=customer_concentration  worth_read=0.65  [8-K 2025-03-10]
+[31/65] IBM x Anthropic (hits=2)
+    financing=0.06  kind=competitor_or_marketing  worth_read=0.62  [10-K 2026-02-24]
+[32/65] NVDA x xAI (hits=2)
+    financing=0.06  kind=customer_concentration  worth_read=0.74  [8-K 2024-11-20]
+[33/65] NVDA x Stargate (hits=2)
+    financing=0.10  kind=product_or_model_mention  worth_read=0.70  [8-K 2025-05-28]
+[34/65] AMD x Anthropic (hits=2)
+    financing=0.09  kind=supply_agreement  worth_read=0.72  [8-K 2026-08-04]
+[35/65] AMD x Databricks (hits=2)
+    financing=0.03  kind=competitor_or_marketing  worth_read=0.62  [8-K 2024-10-29]
+[36/65] SPCX x xAI (hits=2)
+    financing=0.77  kind=other_unrelated  worth_read=0.64  [8-K 2026-06-16]
+[37/65] CRWV x Anthropic (hits=2)
+    financing=0.41  kind=customer_concentration  worth_read=0.72  [8-K 2026-05-07]
+[38/65] APLD x OpenAI (hits=2)
+    financing=0.05  kind=product_or_model_mention  worth_read=0.64  [8-K 2026-04-23]
+[39/65] APLD x Lambda (hits=2)
+    financing=0.39  kind=competitor_or_marketing  worth_read=0.71  [10-K 2024-08-30]
+[40/65] APLD x Crusoe (hits=2)
+    financing=0.35  kind=competitor_or_marketing  worth_read=0.71  [10-K 2024-08-30]
+[41/65] IREN x CoreWeave (hits=2)
+    financing=0.19  kind=competitor_or_marketing  worth_read=0.77  [10-K 2026-08-27]
+[42/65] IREN x Lambda (hits=2)
+    financing=0.06  kind=competitor_or_marketing  worth_read=0.78  [10-K 2026-08-27]
+[43/65] IREN x Crusoe (hits=2)
+    financing=0.06  kind=competitor_or_marketing  worth_read=0.78  [10-K 2026-08-27]
+[44/65] VRT x NVIDIA (hits=2)
+    financing=0.30  kind=other_unrelated  worth_read=0.65  [10-K 2026-02-13]
+[45/65] ORCL x Stargate (hits=1)
+    financing=0.08  kind=other_unrelated  worth_read=0.70  [8-K 2025-03-10]
+[46/65] IBM x CoreWeave (hits=1)
+    financing=0.06  kind=competitor_or_marketing  worth_read=0.64  [8-K 2025-01-30]
+[47/65] CRM x Anthropic (hits=1)
+    financing=0.97  kind=financing_structure  worth_read=0.63  [10-Q 2026-08-27]
+[48/65] CRM x NVIDIA (hits=1)
+    financing=0.03  kind=other_unrelated  worth_read=0.44  [8-K 2025-07-09]
+[49/65] PLTR x NVIDIA (hits=1)
+    financing=0.03  kind=competitor_or_marketing  worth_read=0.51  [8-K 2026-05-04]
+[50/65] NVDA x Databricks (hits=1)
+    financing=0.04  kind=competitor_or_marketing  worth_read=0.60  [8-K 2025-05-28]
+[51/65] AMD x xAI (hits=1)
+    financing=0.04  kind=competitor_or_marketing  worth_read=0.66  [8-K 2025-08-05]
+[52/65] INTC x xAI (hits=1)
+    financing=0.15  kind=other_unrelated  worth_read=0.71  [8-K 2026-04-23]
+[53/65] INTC x Tesla (hits=1)
+    financing=0.20  kind=other_unrelated  worth_read=0.72  [8-K 2026-04-23]
+[54/65] SPCX x Tesla (hits=1)
+    financing=0.92  kind=supply_agreement  worth_read=0.85  [10-Q 2026-08-04]
+[55/65] CRWV x Databricks (hits=1)
+    financing=0.12  kind=customer_concentration  worth_read=0.71  [8-K 2026-08-11]
+[56/65] APLD x xAI (hits=1)
+    financing=0.05  kind=other_unrelated  worth_read=0.65  [8-K 2026-04-23]
+[57/65] APLD x Tesla (hits=1)
+    financing=0.71  kind=customer_concentration  worth_read=0.72  [8-K 2026-07-27]
+[58/65] CIFR x Anthropic (hits=1)
+    financing=0.09  kind=competitor_or_marketing  worth_read=0.67  [8-K 2025-08-07]
+[59/65] CIFR x CoreWeave (hits=1)
+    financing=0.03  kind=competitor_or_marketing  worth_read=0.63  [10-K 2026-02-24]
+[60/65] CIFR x NVIDIA (hits=1)
+    financing=0.12  kind=other_unrelated  worth_read=0.69  [8-K 2024-10-31]
+[61/65] DELL x Anthropic (hits=1)
+    financing=0.04  kind=other_unrelated  worth_read=0.61  [8-K 2025-10-07]
+[62/65] DELL x xAI (hits=1)
+    financing=0.32  kind=customer_concentration  worth_read=0.70  [8-K 2025-02-27]
+[63/65] DELL x CoreWeave (hits=1)
+    financing=0.06  kind=competitor_or_marketing  worth_read=0.66  [8-K 2025-10-07]
+[64/65] SMCI x Crusoe (hits=1)
+    financing=0.94  kind=financing_structure  worth_read=0.80  [8-K 2026-01-02]
+[65/65] VRT x CoreWeave (hits=1)
+    financing=0.04  kind=competitor_or_marketing  worth_read=0.67  [10-K 2026-02-13]
+
+=== TRIAGE RANKING (financing_p x worth_read_p) ===
+RANK FILER  COUNTERPARTY    FIN  READ  KIND
+1    APLD   CoreWeave      0.98  0.82  customer_concentration
+2    AMZN   OpenAI         0.96  0.83  supply_agreement
+3    SPCX   Tesla          0.92  0.85  supply_agreement
+4    AMD    OpenAI         0.98  0.79  supply_agreement
+5    AMZN   Anthropic      0.99  0.77  financing_structure
+6    SMCI   Crusoe         0.94  0.80  financing_structure
+7    CRWV   NVIDIA         0.94  0.79  related_party_transaction
+8    MSFT   OpenAI         0.99  0.75  related_party_transaction
+9    INTC   NVIDIA         0.97  0.76  financing_structure
+10   APLD   NVIDIA         0.97  0.74  financing_structure
+11   NVDA   OpenAI         0.89  0.77  financing_structure
+12   IREN   NVIDIA         0.76  0.86  supply_agreement
+13   CRWV   OpenAI         0.81  0.79  supply_agreement
+14   CRM    Anthropic      0.97  0.63  financing_structure
+15   APLD   Tesla          0.71  0.72  customer_concentration
+16   SPCX   xAI            0.77  0.64  other_unrelated
+17   SMCI   Lambda         0.43  0.69  supply_agreement
+18   CRWV   Anthropic      0.41  0.72  customer_concentration
+19   APLD   Lambda         0.39  0.71  competitor_or_marketing
+20   APLD   Crusoe         0.35  0.71  competitor_or_marketing
+21   DELL   xAI            0.32  0.70  customer_concentration
+22   VRT    NVIDIA         0.30  0.65  other_unrelated
+23   ORCL   OpenAI         0.25  0.69  customer_concentration
+24   ORCL   NVIDIA         0.26  0.66  customer_concentration
+25   ORCL   xAI            0.25  0.65  customer_concentration
+26   IREN   CoreWeave      0.19  0.77  competitor_or_marketing
+27   INTC   Tesla          0.20  0.72  other_unrelated
+28   INTC   xAI            0.15  0.71  other_unrelated
+29   NVDA   CoreWeave      0.13  0.71  other_unrelated
+30   CRWV   Databricks     0.12  0.71  customer_concentration
+31   NVDA   Anthropic      0.11  0.76  supply_agreement
+32   CIFR   NVIDIA         0.12  0.69  other_unrelated
+33   NVDA   Stargate       0.10  0.70  product_or_model_mention
+34   AMZN   Databricks     0.10  0.67  supply_agreement
+35   AMD    Anthropic      0.09  0.72  supply_agreement
+36   CIFR   Anthropic      0.09  0.67  competitor_or_marketing
+37   ORCL   Stargate       0.08  0.70  other_unrelated
+38   AMZN   NVIDIA         0.08  0.68  supply_agreement
+39   SMCI   NVIDIA         0.09  0.56  competitor_or_marketing
+40   IREN   Lambda         0.06  0.78  competitor_or_marketing
+41   IREN   Crusoe         0.06  0.78  competitor_or_marketing
+42   NVDA   xAI            0.06  0.74  customer_concentration
+43   DELL   CoreWeave      0.06  0.66  competitor_or_marketing
+44   DELL   NVIDIA         0.06  0.65  competitor_or_marketing
+45   IBM    CoreWeave      0.06  0.64  competitor_or_marketing
+46   IBM    Anthropic      0.06  0.62  competitor_or_marketing
+47   APLD   xAI            0.05  0.65  other_unrelated
+48   APLD   OpenAI         0.05  0.64  product_or_model_mention
+49   IBM    NVIDIA         0.05  0.63  competitor_or_marketing
+50   CRWV   Crusoe         0.05  0.60  competitor_or_marketing
+51   VRT    CoreWeave      0.04  0.67  competitor_or_marketing
+52   NVDA   Tesla          0.04  0.66  competitor_or_marketing
+53   AMD    xAI            0.04  0.66  competitor_or_marketing
+54   DELL   Anthropic      0.04  0.61  other_unrelated
+55   NVDA   Databricks     0.04  0.60  competitor_or_marketing
+56   MSFT   Anthropic      0.04  0.54  competitor_or_marketing
+57   CIFR   CoreWeave      0.03  0.63  competitor_or_marketing
+58   AMD    Databricks     0.03  0.62  competitor_or_marketing
+59   CRWV   Lambda         0.03  0.56  competitor_or_marketing
+60   PLTR   NVIDIA         0.03  0.51  competitor_or_marketing
+61   AMZN   Lambda         0.04  0.33  product_or_model_mention
+62   CRM    NVIDIA         0.03  0.44  other_unrelated
+63   AMD    NVIDIA         0.02  0.52  competitor_or_marketing
+64   MSFT   Databricks     0.02  0.50  competitor_or_marketing
+65   META   Anthropic      0.03  0.31  other_unrelated
+
+=== CONTROL: the 5 that WERE read by hand (must not sink) ===
+  SPCX x Tesla      financing=0.92 worth_read=0.85 kind=supply_agreement   <-- real structure - must rank HIGH
+  AMD x OpenAI     financing=0.98 worth_read=0.79 kind=supply_agreement   <-- real structure - must rank HIGH
+  MSFT x OpenAI     financing=0.99 worth_read=0.75 kind=related_party_transaction   <-- real structure - must rank HIGH
+  SPCX x xAI        financing=0.77 worth_read=0.64 kind=other_unrelated   <-- real structure - must rank HIGH
+  ORCL x OpenAI     financing=0.25 worth_read=0.69 kind=customer_concentration   <-- REFUTATION - must rank LOW
+
+wrote triage_full_v2.csv
+
+=== COST OF THIS RUN (65 edges judged) ===
+  input tokens : 74,834 (mean 1,151/edge)
+  output tokens: 10,332 (mean 158/edge)
+  wall time    : 199s for Jev (mean 3.1s/edge), plus EDGAR fetches
+
+  PROJECTION to the full 65-edge scan: ~74,815 in / ~10,270 out tokens, ~3 min of Jev wall time
+  (2 API calls are batched into ONE request per edge, so no fan-out cost.)

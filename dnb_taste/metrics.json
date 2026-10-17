@@ -1,0 +1,32 @@
+{
+  "reese_solo_v1": {
+    "centroid_hz": 125.2,
+    "rolloff95_hz": 269.2,
+    "flatness": 0.0,
+    "crest": 3.07,
+    "sub_30_90_pct": 38.3,
+    "mid_300_1500_pct": 4.7,
+    "high_1500_8000_pct": 0.0,
+    "rms_dbfs": -9.9
+  },
+  "reese_solo_v2": {
+    "centroid_hz": 137.1,
+    "rolloff95_hz": 527.6,
+    "flatness": 0.00015,
+    "crest": 2.73,
+    "sub_30_90_pct": 75.8,
+    "mid_300_1500_pct": 11.5,
+    "high_1500_8000_pct": 0.3,
+    "rms_dbfs": -8.9
+  },
+  "drop_v2_full": {
+    "centroid_hz": 304.7,
+    "rolloff95_hz": 786.0,
+    "flatness": 0.01717,
+    "crest": 2.52,
+    "sub_30_90_pct": 71.6,
+    "mid_300_1500_pct": 10.9,
+    "high_1500_8000_pct": 2.5,
+    "rms_dbfs": -8.5
+  }
+}

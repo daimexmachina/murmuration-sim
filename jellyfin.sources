@@ -1,0 +1,6 @@
+Types: deb
+URIs: https://repo.jellyfin.org/debian
+Suites: trixie
+Components: main
+Architectures: arm64
+Signed-By: /etc/apt/keyrings/jellyfin.gpg

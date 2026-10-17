@@ -1,0 +1,41 @@
+{
+  "reese_solo_v1": {
+    "centroid_hz": 125.2,
+    "rolloff95_hz": 269.2,
+    "flatness": 0.0,
+    "crest": 3.04,
+    "sub_30_90_pct": 38.3,
+    "low_90_300_pct": 56.8,
+    "mid_300_1500_pct": 4.7,
+    "high_1500_8000_pct": 0.0,
+    "pitch_clarity": 0.468,
+    "pitch_hz": 43.8,
+    "rms_dbfs": -9.8
+  },
+  "reese_solo_v3": {
+    "centroid_hz": 415.7,
+    "rolloff95_hz": 1394.3,
+    "flatness": 0.00167,
+    "crest": 2.92,
+    "sub_30_90_pct": 39.3,
+    "low_90_300_pct": 15.1,
+    "mid_300_1500_pct": 41.3,
+    "high_1500_8000_pct": 4.2,
+    "pitch_clarity": 0.386,
+    "pitch_hz": 43.8,
+    "rms_dbfs": -9.5
+  },
+  "drop_v3_full": {
+    "centroid_hz": 570.4,
+    "rolloff95_hz": 1846.5,
+    "flatness": 0.02295,
+    "crest": 2.55,
+    "sub_30_90_pct": 36.6,
+    "low_90_300_pct": 17.4,
+    "mid_300_1500_pct": 39.1,
+    "high_1500_8000_pct": 6.1,
+    "pitch_clarity": 0.337,
+    "pitch_hz": 43.8,
+    "rms_dbfs": -8.6
+  }
+}
